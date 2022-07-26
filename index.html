@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function money() {
+            let total = 500
+            total = await new Promise(function(res) {
+                setTimeout(function() {
+                    res(total - 10)
+                }, 1000)
+            })
+            console.log("So tien sau khi mua rau la:" + total)
+            total = await new Promise(function(res) {
+                setTimeout(function() {
+                    res(total - 100)
+                }, 2000)
+            })
+            console.log("So tien sau khi mua ca la:" + total)
+            total = await new Promise(function(res) {
+                setTimeout(function() {
+                    res(total - 120)
+                }, 3000)
+            })
+            console.log("So tien sau khi mua ga la:" + total)
+            total = await new Promise(function(res) {
+                setTimeout(function() {
+                    res(total - 70)
+                }, 2000)
+            })
+            console.log("So tien sau khi mua lon la:" + total)
+        }
+        money()
+    </script>
+</body>
+</html>
